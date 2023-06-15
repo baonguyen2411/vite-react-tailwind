@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint \"src/**/*.{js,ts,jsx}\"--report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx}\" --ignore-path .gitignore --report-unused-disable-directives --max-warnings 0 --fix",
-    "format": "prettier . --write",
+    "prettier": "prettier --write .",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -46,6 +46,6 @@
   },
   "lint-staged": {
     "*.{js,jsx}": "npm run lint:fix",
-    "*.{js,jsx,css,scss,md,html,json}": "npm run format"
+    "*.{js,jsx,css,scss,md,html,json}": "npm run prettier"
   }
 }
