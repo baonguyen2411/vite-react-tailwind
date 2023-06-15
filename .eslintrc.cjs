@@ -1,35 +1,35 @@
 module.exports = {
   env: { browser: true, es2020: true },
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "eslint-config-prettier",
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended',
+    'prettier',
   ],
-  parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
   settings: {
-    react: { version: "18.2" },
-    "import/resolver": {
+    react: { version: '18.2' },
+    'import/resolver': {
       node: {
-        paths: ["src"],
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        paths: ['src'],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
   },
-  plugins: ["react-refresh"],
+  plugins: ['react-refresh'],
   rules: {
-    "no-unused-vars": [
-      "error",
+    'no-unused-vars': [
+      'error',
       {
-        vars: "all",
-        args: "after-used",
+        vars: 'all',
+        args: 'after-used',
         ignoreRestSiblings: true,
-        argsIgnorePattern: "^_",
+        argsIgnorePattern: '^_',
       },
     ],
-    "react/react-in-jsx-scope": "off",
-    "react-refresh/only-export-components": "warn",
+    'react/react-in-jsx-scope': 'off',
+    'react-refresh/only-export-components': 'warn',
   },
 };
