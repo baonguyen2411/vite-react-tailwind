@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "lint:fix": "eslint --fix src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint \"src/**/*.{js,ts,jsx}\"--report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint \"src/**/*.{js,ts,jsx}\" --ignore-path .gitignore --report-unused-disable-directives --max-warnings 0 --fix",
     "format": "prettier . --write",
     "preview": "vite preview",
     "prepare": "husky install"
@@ -24,6 +24,8 @@
     "tw-elements": "^1.0.0-beta2"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@vitejs/plugin-react-swc": "^3.0.0",
