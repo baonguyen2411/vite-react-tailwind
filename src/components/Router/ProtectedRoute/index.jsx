@@ -1,7 +1,9 @@
 import { Outlet, Navigate } from 'react-router-dom';
 
+import { useAuth } from '@/services/hooks/useAuth';
+
 const ProtectedRoute = () => {
-  const token = false;
+  const { token } = useAuth();
 
   // Check if the user is authenticated
   if (!token) {

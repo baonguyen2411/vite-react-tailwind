@@ -18,7 +18,7 @@ module.exports = {
       },
     },
   },
-  plugins: ['react-refresh', 'prettier'],
+  plugins: ['prettier'],
   rules: {
     'no-unused-vars': [
       'error',
@@ -30,6 +30,5 @@ module.exports = {
       },
     ],
     'react/react-in-jsx-scope': 'off',
-    'react-refresh/only-export-components': 'warn',
   },
 };
