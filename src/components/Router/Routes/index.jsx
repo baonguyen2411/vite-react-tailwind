@@ -7,6 +7,7 @@ import ErrorPage from '@/pages/ErrorPage';
 
 import ProtectedRoute from '../ProtectedRoute';
 
+const HomePage = lazy(() => import('@/pages/HomePage'));
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
 
 // Define public routes accessible to all users
@@ -30,7 +31,7 @@ const routesForAuthenticatedOnly = [
     children: [
       {
         path: '/',
-        element: <div>User Home Page</div>,
+        element: <HomePage />,
       },
       {
         path: '/profile',
