@@ -1,11 +1,14 @@
+import { useEffect } from 'react';
 import { Collapse, Ripple, initTE } from 'tw-elements';
 
 import Routes from '@/components/Router/Routes';
 import AuthProvider from '@/components/layouts/AuthProvider';
 
-initTE({ Collapse, Ripple });
-
 const App = () => {
+  useEffect(() => {
+    initTE({ Collapse, Ripple });
+  }, []);
+
   return (
     <AuthProvider>
       <Routes />

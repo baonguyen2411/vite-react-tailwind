@@ -40,15 +40,25 @@ const VARIANTS_BUTTON = {
   },
 };
 
-const Button = ({ className, variant, type, text, disabled, icon }) => {
+const Button = ({ variant, type, text, disabled, icon, ...restProps }) => {
+  let className = VARIANTS_BUTTON[variant].class;
+  if (disabled) {
+    className = `pointer-events-none disabled:opacity-70 ${className}`;
+  }
+  if (icon) {
+    className = `flex items-center ${className}`;
+  }
+  if (restProps.className) {
+    className = `${className} ${restProps.className}`;
+  }
+
   return (
     <button
       type={type}
       {...(VARIANTS_BUTTON[variant]?.props ? VARIANTS_BUTTON[variant].props : {})}
       {...(disabled ? { disabled } : {})}
-      className={`${disabled ? 'pointer-events-none disabled:opacity-70' : ''} ${icon ? 'flex items-center' : ''} ${
-        VARIANTS_BUTTON[variant].class
-      } ${className}`}
+      {...restProps}
+      className={className}
     >
       {icon}
       {text}
