@@ -1,4 +1,5 @@
 import Accordion from '@/components/core/Accordion';
+import Avatar from '@/components/core/Avatar';
 import Button from '@/components/core/Button';
 
 const HomePage = () => {
@@ -41,6 +42,12 @@ const HomePage = () => {
               </svg>
             }
           />
+        </div>
+      </Accordion>
+      <Accordion title="Avatars">
+        <div className="flex items-center flex-wrap gap-4">
+          <Avatar />
+          <Avatar className="rounded-lg" src="https://tecdn.b-cdn.net/img/new/avatars/5.webp" />
         </div>
       </Accordion>
     </div>
