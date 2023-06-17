@@ -1,11 +1,13 @@
+import { lazy } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
 import { useAuth } from '@/services/hooks/useAuth';
 
 import ErrorPage from '@/pages/ErrorPage';
-import Login from '@/pages/LoginPage';
 
 import ProtectedRoute from '../ProtectedRoute';
+
+const LoginPage = lazy(() => import('@/pages/LoginPage'));
 
 // Define public routes accessible to all users
 const routesForPublic = [
@@ -46,7 +48,7 @@ const routesForAuthenticatedOnly = [
 const routesForNotAuthenticatedOnly = [
   {
     path: '/login',
-    element: <Login />,
+    element: <LoginPage />,
   },
 ];
 

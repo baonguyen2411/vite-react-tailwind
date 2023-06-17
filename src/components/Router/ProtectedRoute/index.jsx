@@ -2,6 +2,9 @@ import { Outlet, Navigate } from 'react-router-dom';
 
 import { useAuth } from '@/services/hooks/useAuth';
 
+import Header from '@/components/layouts/Header';
+import Footer from '@/components/layouts/Footer';
+
 const ProtectedRoute = () => {
   const { token } = useAuth();
 
@@ -14,8 +17,9 @@ const ProtectedRoute = () => {
   // If authenticated, render the child routes
   return (
     <>
-      {/* other elements */}
+      <Header />
       <Outlet />
+      <Footer />
     </>
   );
 };
