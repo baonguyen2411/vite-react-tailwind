@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { Collapse, Ripple, initTE } from 'tw-elements';
 
-import Routes from '@/components/router/Routes';
-import AuthProvider from '@/components/layouts/AuthProvider';
+import AuthProvider from '@/wrappers/providers/AuthProvider';
+import Routes from '@/components/routes/Routes';
 
 const App = () => {
   useEffect(() => {
