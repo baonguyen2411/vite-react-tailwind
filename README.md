@@ -5,12 +5,28 @@ Simple Vite project for React with some basic structure folder
 ## Table of contents
 
 - [General info](#general-info)
+- [Folder structure](#folder-structure)
 - [Technologies](#technologies)
 - [Setup](#setup)
 
 ## General info
 
 This project is a simple project on how to design a structured folder in Vite and React and how to create some basic components with Tailwind.
+
+## Folder structure
+
+    .
+    ├── ...
+    ├── src
+    │   ├── assets
+    │   ├── components
+    │   ├── components
+    │   ├── config
+    │   ├── pages
+    │   ├── services
+    │   ├── utils
+    │   └── wrappers
+    └── ...
 
 ## Technologies
 
@@ -32,4 +48,10 @@ $ git clone https://github.com/baonguyen2411/vite-react-tailwind.git .
 $ cd vite-react-tailwind
 $ npm install
 $ npm run dev
+```
+
+To build this project:
+
+```
+$ npm run build
 ```
