@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Dropdown, Collapse, Ripple, initTE } from 'tw-elements';
 
 import AuthProvider from '@/wrappers/providers/AuthProvider';
-import Routes from '@/components/routes/Routes';
+import Routes from '@/routes/Routes';
 
 const App = () => {
   useEffect(() => {

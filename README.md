@@ -22,6 +22,7 @@ This project is a simple project on how to design a structured folder in Vite an
     │   ├── components
     │   ├── config
     │   ├── pages
+    │   ├── routes
     │   ├── services
     │   ├── utils
     │   └── wrappers
@@ -42,6 +43,10 @@ This folder consists of a configuration file where we store environment variable
 ### Pages folder
 
 The files in the pages folder indicate the route of the react application. Each file in this folder contains its route. A page can contain its subfolder. Each page has its state and is usually used to call an async operation. It usually consists of various components grouped
+
+### Routes folder
+
+This folder consists of all routes of the application. It consists of private, protected, and all types of routes. Here we can even call our sub-route.
 
 ### Services folder
 
