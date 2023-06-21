@@ -1,7 +1,7 @@
 import { lazy } from 'react';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { useAuth } from '@/services/hooks/useAuth';
+import useAuth from '@/services/hooks/useAuth';
 
 import ErrorPage from '@/pages/ErrorPage';
 
