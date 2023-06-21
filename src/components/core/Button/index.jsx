@@ -40,7 +40,7 @@ const VARIANTS_BUTTON = {
   },
 };
 
-const Button = ({ variant, type, text, disabled, icon, ...restProps }) => {
+const Button = ({ children, variant, type, disabled, icon, onClick, ...restProps }) => {
   let className = VARIANTS_BUTTON[variant].class;
   if (disabled) {
     className = `pointer-events-none disabled:opacity-70 ${className}`;
@@ -59,29 +59,32 @@ const Button = ({ variant, type, text, disabled, icon, ...restProps }) => {
       {...(disabled ? { disabled } : {})}
       {...restProps}
       className={className}
+      onClick={onClick}
     >
       {icon}
-      {text}
+      {children}
     </button>
   );
 };
 
 Button.propTypes = {
+  children: PropTypes.any,
   className: PropTypes.string,
   variant: PropTypes.string,
   type: PropTypes.string,
-  text: PropTypes.string,
   disabled: PropTypes.bool,
-  icon: PropTypes.any,
+  icon: PropTypes.element,
+  onClick: PropTypes.func,
 };
 
 Button.defaultProps = {
+  children: 'Button',
   className: '',
   variant: 'tertiary',
   type: 'button',
-  text: 'Button',
   disabled: false,
   icon: null,
+  onClick() {},
 };
 
 export default memo(Button);

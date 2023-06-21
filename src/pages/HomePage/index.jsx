@@ -7,14 +7,14 @@ const HomePage = () => {
     <div>
       <Accordion title="Buttons">
         <div className="flex items-center flex-wrap gap-4">
-          <Button variant="primary" text="Primary" />
-          <Button variant="secondary" text="Secondary" />
-          <Button variant="tertiary" text="Tetriary" />
-          <Button variant="success" text="Success" />
-          <Button variant="warning" text="Warning" />
-          <Button variant="info" text="Info" />
-          <Button variant="danger" text="Danger" />
-          <Button variant="link" text="Link" />
+          <Button variant="primary" />
+          <Button variant="secondary" />
+          <Button variant="tertiary" />
+          <Button variant="success" />
+          <Button variant="warning" />
+          <Button variant="info" />
+          <Button variant="danger" />
+          <Button variant="link" />
           <Button
             variant="primary"
             text="Button"
