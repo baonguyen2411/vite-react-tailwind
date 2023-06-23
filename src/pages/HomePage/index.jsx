@@ -1,6 +1,10 @@
 import Accordion from '@/components/core/Accordion';
 import Avatar from '@/components/core/Avatar';
+import Breadcrumbs from '@/components/core/Breadcrumbs';
 import Button from '@/components/core/Button';
+import Dropdown from '@/components/core/Dropdown';
+import Popover from '@/components/core/Popover';
+import Toasts from '@/components/core/Toasts';
 
 const HomePage = () => {
   return (
@@ -49,6 +53,18 @@ const HomePage = () => {
           <Avatar />
           <Avatar className="rounded-lg" src="https://tecdn.b-cdn.net/img/new/avatars/5.webp" />
         </div>
+      </Accordion>
+      <Accordion title="Breadcrumbs">
+        <Breadcrumbs />
+      </Accordion>
+      <Accordion title="Dropdown">
+        <Dropdown />
+      </Accordion>
+      <Accordion title="Popover">
+        <Popover />
+      </Accordion>
+      <Accordion title="Toasts">
+        <Toasts />
       </Accordion>
     </div>
   );

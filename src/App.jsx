@@ -1,12 +1,12 @@
 import { useEffect } from 'react';
-import { Dropdown, Collapse, Ripple, initTE } from 'tw-elements';
+import { Dropdown, Collapse, Ripple, Toast, initTE } from 'tw-elements';
 
 import AuthProvider from '@/wrappers/providers/AuthProvider';
 import Routes from '@/routes/Routes';
 
 const App = () => {
   useEffect(() => {
-    initTE({ Dropdown, Collapse, Ripple });
+    initTE({ Dropdown, Toast, Collapse, Ripple });
   }, []);
 
   return (
