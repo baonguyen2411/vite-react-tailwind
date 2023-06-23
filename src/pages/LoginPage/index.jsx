@@ -1,21 +1,19 @@
-import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import useAuth from '@/services/hooks/useAuth';
 
 const Login = () => {
-  const { setToken } = useAuth();
-  const navigate = useNavigate();
+  const { loginRedirect } = useAuth();
 
-  const handleLogin = () => {
-    setToken('this is a test token');
-    navigate('/', { replace: true });
-  };
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      loginRedirect();
+    }, 2000);
 
-  setTimeout(() => {
-    handleLogin();
-  }, 3 * 1000);
+    return () => clearTimeout(timer);
+  }, []);
 
-  return <>Login Page</>;
+  return <></>;
 };
 
 export default Login;
