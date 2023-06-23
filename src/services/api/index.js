@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-import CONFIG from '@/config';
+import config from '@/config';
 
-const api = axios.create({ baseURL: CONFIG.BASE_URL || window.location.origin });
+const api = axios.create({ baseURL: config.BASE_URL || window.location.origin, 'Content-Type': 'application/json' });
 
 export default api;
