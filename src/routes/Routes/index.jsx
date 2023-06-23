@@ -9,6 +9,7 @@ import ProtectedRoute from '../ProtectedRoute';
 
 const HomePage = lazy(() => import('@/pages/HomePage'));
 const LoginPage = lazy(() => import('@/pages/LoginPage'));
+const CallbackPage = lazy(() => import('@/pages/CallbackPage'));
 
 // Define public routes accessible to all users
 const routesForPublic = [
@@ -19,6 +20,10 @@ const routesForPublic = [
   {
     path: '/about-us',
     element: <div>About Us</div>,
+  },
+  {
+    path: '/auth/callback',
+    element: <CallbackPage />,
   },
 ];
 
