@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint \"src/**/*.{js,ts,jsx}\"--report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint \"src/**/*.{js,ts,jsx}\" --ignore-path .gitignore --report-unused-disable-directives --max-warnings 0 --fix",
-    "prettier": "prettier --write .",
+    "prettier": "prettier --write . --config ./.prettierrc.cjs",
     "preview": "vite preview",
     "prepare": "husky install"
   },

@@ -29,6 +29,12 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'react/react-in-jsx-scope': 'off',
     'react-hooks/exhaustive-deps': 'off',
   },
