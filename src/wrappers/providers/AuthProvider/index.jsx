@@ -5,9 +5,9 @@ import { PropTypes } from 'prop-types';
 // Internal dependencies
 import { LOGIN_REDIRECT_URL, LOGOUT_REDIRECT_URL } from '@/config';
 
+import authContext from '@/services/contexts/authContext';
 import axiosInstance from '@/services/api';
 import * as localStorageService from '@/services/storage';
-import authContext from '@/services/contexts/authContext';
 
 import { STATUS_CODES } from '@/utils/constants/statusCode';
 
@@ -17,7 +17,10 @@ const AuthProvider = ({ children }) => {
   // State to hold the authentication token
   const [token, setToken] = useState(localStorageService.getToken);
 
-  const loginRedirect = useCallback(() => window.location.replace(LOGIN_REDIRECT_URL));
+  const loginRedirect = useCallback(() => {
+    localStorageService.setCurrentURL(`${window.location.pathname}${window.location.search}`);
+    window.location.replace(LOGIN_REDIRECT_URL);
+  });
   const logoutRedirect = useCallback(() => window.location.replace(LOGOUT_REDIRECT_URL));
 
   // Memoized value of the authentication context
@@ -75,6 +78,9 @@ const AuthProvider = ({ children }) => {
       );
     } else {
       localStorageService.removeToken();
+      localStorageService.removeAccessToken();
+      localStorageService.removeRefreshToken();
+      localStorageService.removeCurrentURL();
     }
   }, [token]);
 
