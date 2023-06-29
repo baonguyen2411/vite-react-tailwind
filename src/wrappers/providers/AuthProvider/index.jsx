@@ -17,8 +17,8 @@ const AuthProvider = ({ children }) => {
   // State to hold the authentication token
   const [token, setToken] = useState(localStorageService.getToken);
 
-  const loginRedirect = useCallback(() => {
-    localStorageService.setCurrentURL(`${window.location.pathname}${window.location.search}`);
+  const loginRedirect = useCallback((currentPath = '/') => {
+    localStorageService.setCurrentURL(currentPath);
     window.location.replace(LOGIN_REDIRECT_URL);
   });
   const logoutRedirect = useCallback(() => window.location.replace(LOGOUT_REDIRECT_URL));
@@ -66,7 +66,7 @@ const AuthProvider = ({ children }) => {
               if (originalRequest && accessToken) {
                 // do something to refresh token
               } else {
-                loginRedirect();
+                loginRedirect(`${window.location.pathname}${window.location.search}`);
               }
               break;
 

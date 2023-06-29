@@ -17,7 +17,7 @@ const CallbackPage = () => {
     if (location.hash) {
       const { id_token: idToken } = paramsToObject(location.hash);
       setToken(idToken);
-      navigate(getCurrentURL() || '/');
+      navigate(getCurrentURL());
     } else {
       navigate('/login');
     }
