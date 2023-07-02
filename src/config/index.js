@@ -1,10 +1,11 @@
 import { objectToParams } from '@/utils/dataFormat/uriFormat';
 
+const { VITE_BASE_URL, VITE_TENANT_ID, VITE_CLIENT_ID, VITE_CLIENT_SECRET } = import.meta.env;
 const config = {
-  BASE_URL: '',
-  TENANT_ID: '',
-  CLIENT_ID: '',
-  CLIENT_SECRET: '',
+  BASE_URL: VITE_BASE_URL,
+  TENANT_ID: VITE_TENANT_ID,
+  CLIENT_ID: VITE_CLIENT_ID,
+  CLIENT_SECRET: VITE_CLIENT_SECRET,
 };
 
 const queryString = objectToParams({
